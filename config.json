@@ -1,0 +1,14 @@
+{
+    "discord": {
+        "botToken": "token",
+        "guildId": "657727907350708274",
+        "defaultChannel": "728296453604114505"
+    },
+    "guilded": {
+        "email": "example@gmail.com",
+        "password": "123456",
+        "teamId": "abcd1234",
+        "defaultChannel": "a-b-c-d",
+        "logTeamsOnStart": true
+    }
+}
