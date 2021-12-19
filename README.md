@@ -41,5 +41,7 @@ You will need [Git](https://git-scm.com/downloads) and [NodeJS](https://nodejs.o
 
 ## 🛠️️ Finding channel/team/guild IDs
 You can find Guilded Channel IDs and pressing copy link, you'll get a link that ends with something along the lines of "channels/**e6b9270d-3bda-43ba-b21f-373ff782c59a**/chat". The part in bold is your channel ID.
+
 For Team IDs, go into the Widget page in Server settings and copy the widget code, paste it in some text editor for convenience, and find the link that ends in "canvas_index.html?route=%2Fcanvas%2Fembed%2Fbadge%2F**0jb0dDOl**". The bold part is again your ID (careful not to include the %2F).
+
 For Discord, just enable "Developer Mode" in Advanced setings, right click your channel/guild, and press copy id.
