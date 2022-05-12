@@ -58,7 +58,7 @@ class GuildedToDiscordBridge {
 
         discordMessage.username = author?.name || "Guilded Bridge";
         discordMessage.avatarURL = author?.avatarURLs?.small;
-
+        
         message.parsedContent.parsedArr.forEach(element => {
             switch (element.type) {
                 case 'text':
@@ -94,7 +94,12 @@ class GuildedToDiscordBridge {
                 categories.find(c => c.id == channel.channelCategoryID)?.name == 
                 this.bridge.discord.guild.channels.get(dChannel.parentID)?.name);
         }
-        channel = channel.array()[0] || teamChannels.get(this.settings.defaultChannel);
+        channel = channel.array()[0];
+        if (!channel) {
+            if (!this.settings.forwardToDefaultWhenNotFound) return;
+            channel = teamChannels.get(this.settings.defaultChannel);
+            message = message.replace(">", " @ #" + dChannel.name + ">");
+        }
         const client = new WebhookClient(await this.getChannelWebhook(channel));
         client.send(message);
     }

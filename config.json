@@ -8,6 +8,7 @@
         "email": "example@gmail.com",
         "password": "123456",
         "teamId": "abcd1234",
+        "forwardToDefaultWhenNotFound": true,
         "defaultChannel": "a-b-c-d",
         "logTeamsOnStart": true
     }

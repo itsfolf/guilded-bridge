@@ -14,6 +14,7 @@ class DiscordToGuildedBridge {
         this.client.on('ready', () => {
             console.log(`[Discord] Logged in as ${this.client.user.username}/${this.client.user.id}`);
             this.guild = this.client.guilds.get(this.settings.guildId);
+            if (!this.guild) return console.log("[Discord] Invalid guild ID provided.")
             console.log(`[Discord] Forwarding to guild ${this.guild.name}`)
         })
 
